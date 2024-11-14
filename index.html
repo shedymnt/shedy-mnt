@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Shopping</h1>
+        <nav>
+            <button onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+        </nav>
+    </header>
+
+    <!-- Products Section -->
+    <section id="products-section">
+        <h2>Our Products</h2>
+        <div id="product-list"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about-section" style="display: none;">
+        <h2>About Us</h2>
+        <p>We are a fictional online store selling the best products.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us at contact@ecommerce.com</p>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">×</span>
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="cart-total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <button onclick="showSection(products)">Products</button>
+            <button onclick="showSection('about')">About</button>
+            <button onclick="showSection('contact')">Contact</button>
+        </div>
+        <p>&copy; 2024 Simple E-commerce. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
